@@ -32,7 +32,7 @@ body {
 
 #search-box {
     padding: 10px;
-    width: 300px; /* Length of the search box */
+    width: 400px; /* Length of the search box */
     border: none; /* Remove default border */
     border-radius: 4px;
     font-size: 16px;
