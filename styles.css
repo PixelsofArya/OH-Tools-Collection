@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('once human wallaper 1.jpg'); /* Set your background image here */
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background image */
+    color: #fff; /* White text color for contrast */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Add some padding around the container */
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Bring header to the front */
+}
+
+.page-title {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust the font size */
+    color: #fff; /* White text for title */
+}
+
+.search-container {
+    margin-top: 10px; /* Space between title and search box */
+}
+
+#search-box {
+    padding: 10px;
+    width: 400px; /* Length of the search box */
+    border: none; /* Remove default border */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(50, 50, 50, 0.8); /* Dark glass effect */
+    color: #fff; /* White text */
+    backdrop-filter: blur(10px); /* Background blur for glass effect */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.tool-card {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(30, 30, 30, 0.8); /* Darker glass effect for cards */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6); /* Darker shadow for depth */
+    padding: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(15px); /* Apply blur for glass effect */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth background color change */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.tool-card:hover {
+    background-color: rgba(30, 30, 30, 0.5); /* More transparent on hover */
+    backdrop-filter: blur(20px); /* Increase blur on hover for a stronger glass effect */
+    z-index: 10; /* Bring hovered card above others */
+}
+
+.tool-image {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.tool-image img {
+    border-radius: 50%;
+    width: 80px; /* Adjust the size of the circular image */
+    height: 80px; /* Adjust the size of the circular image */
+}
+
+.tool-info {
+    flex-grow: 1; /* Allow this section to take remaining space */
+}
+
+.tool-info h3 {
+    margin: 0 0 5px 0; /* Adjust margin for better spacing */
+    font-size: 18px;
+    color: #fff; /* White text for titles */
+}
+
+.tool-info p {
+    color: #ddd; /* Lighter text color for descriptions */
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+.coffee-button {
+    position: fixed; /* Fixed position for the button */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Optional: Add a hover effect */
+.coffee-button img {
+    width: 180px; /* Adjust width as needed */
+    height: 50px; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth transition for hover */
+}
+
+.coffee-button:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
